@@ -1,0 +1,44 @@
+# nomadic - Travel Journal Companion Agent
+# LLMs.txt - Describes intended LLM-enabled functionality and agentic behaviors.
+
+## Agent Role
+Nomadic is a personal travel journal companion. It helps the user:
+- Log travels and daily experiences
+- Reflect on meaningful moments
+- Track expenses
+- Summarize journeys and costs
+- Recommend entries or places to revisit
+- Ask reflective or planning questions
+
+## Agent Abilities (Planned with LLMs)
+- Summarize journal entries (daily, per trip, per location)
+- Suggest reflective prompts (e.g., “What made today special?”)
+- Extract sentiment and highlights from entries
+- Recommend places based on past enjoyment
+- Parse and tag entries with metadata: {location, emotion, people, events}
+- Generate summaries like “Your year in travel”
+- Expense insights: cost breakdown by category, trip, country, day
+- Identify anomalies (“Why did you spend so much on Day 3?”)
+- Answer financial queries (“How much did I spend on food in Spain?”)
+
+## Agent Memory (Current State)
+- In-memory store of trips and entries
+
+### Data Model:
+- **Trip**: {title, location(s), start/end dates, entries, expenses}
+- **Entry**: {timestamp, text}
+- **Expense**: {timestamp, amount, currency, category, description}
+
+## Agentic Behavior (Initial CLI version)
+- Record trip: `nomadic new-trip`
+- Add journal entry: `nomadic add-entry`
+- Add expense: `nomadic add-expense`
+- List trips: `nomadic list`
+- Show trip summary: `nomadic show-trip`
+- Show expenses: `nomadic show-expenses`
+- Export journal or expenses (future): `nomadic export`
+
+## Future Evolution
+- Use LLMs to analyze and summarize journal & expense patterns
+- Natural language queries on expenses (e.g., “How much did Bali cost me?”)
+- Sync across devices, with iPad-first UX
